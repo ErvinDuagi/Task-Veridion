@@ -57,12 +57,14 @@ tags_clean: lista de business_tags este convertită din format JSON într-un și
 
 full_profile: câmp compus care concatenează description_clean, tags_clean, category și niche — oferind un rezumat semantic complet per companie, utilizat drept input principal în clasificare.
 
-****3. Explorare date noi (EDA) ****
+**3. Expolorarare date noi:**
     Salvare fișier procesat
     EDA pe datele prelucrate (distribuții, lipsuri, patternuri) realizata in jupyter notebook
     Detalii în:
 - `00_eda_raw.ipynb`: analiza inițială pe datele brute.
 - `01_eda_explorare.ipynb`: analiză pe `processed_data.csv`.
+
+  
 **4. Crearea setului de antrenare**
 În această etapă, am generat automat etichete de antrenament pentru fiecare companie prin măsurarea similarității semantice între profilul textual (full_profile) și descrierile din taxonomia de etichete. Folosind TF-IDF și cosine similarity, am atribuit fiecărei companii cele mai apropiate 3 etichete, salvate într-un fișier annotated_training_set.csv ce va fi folosit pentru antrenarea modelului.
 
